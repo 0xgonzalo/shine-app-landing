@@ -84,16 +84,16 @@ export default function Navbar() {
 
               {/* Social icons (desktop) */}
               <div className="hidden md:flex items-center gap-4">
-                <a href="#" aria-label="Follow Shine on X" className="text-white opacity-60 hover:opacity-100 transition-opacity">
+                <a href="https://x.com/Shinemusic_xyz" target="_blank" rel="noopener noreferrer" aria-label="Follow Shine on X" className="text-white opacity-60 hover:opacity-100 transition-opacity">
                   <XIcon className="w-5 h-5" />
                 </a>
-                <a href="#" aria-label="Follow Shine on Instagram" className="text-white opacity-60 hover:opacity-100 transition-opacity">
+                <a href="https://www.instagram.com/shinemusic.xyz/" target="_blank" rel="noopener noreferrer" aria-label="Follow Shine on Instagram" className="text-white opacity-60 hover:opacity-100 transition-opacity">
                   <InstagramIcon className="w-5 h-5" />
                 </a>
-                <a href="#" aria-label="Follow Shine on Farcaster" className="text-white opacity-60 hover:opacity-100 transition-opacity">
+                <a href="https://farcaster.xyz/shinemusic" target="_blank" rel="noopener noreferrer" aria-label="Follow Shine on Farcaster" className="text-white opacity-60 hover:opacity-100 transition-opacity">
                   <FarcasterIcon className="w-5 h-5" />
                 </a>
-                <a href="mailto:hello@shine.music" aria-label="Email Shine" className="text-white opacity-60 hover:opacity-100 transition-opacity">
+                <a href="mailto:shinemusic.xyz@gmail.com" aria-label="Email Shine" className="text-white opacity-60 hover:opacity-100 transition-opacity">
                   <Mail className="w-5 h-5" />
                 </a>
               </div>
@@ -144,16 +144,16 @@ export default function Navbar() {
               ))}
 
               <div className="flex items-center gap-6 mt-8">
-                <a href="#" aria-label="Follow Shine on X" className="text-white opacity-60 hover:opacity-100">
+                <a href="https://x.com/Shinemusic_xyz" target="_blank" rel="noopener noreferrer" aria-label="Follow Shine on X" className="text-white opacity-60 hover:opacity-100">
                   <XIcon className="w-6 h-6" />
                 </a>
-                <a href="#" aria-label="Follow Shine on Instagram" className="text-white opacity-60 hover:opacity-100">
+                <a href="https://www.instagram.com/shinemusic.xyz/" target="_blank" rel="noopener noreferrer" aria-label="Follow Shine on Instagram" className="text-white opacity-60 hover:opacity-100">
                   <InstagramIcon className="w-6 h-6" />
                 </a>
-                <a href="#" aria-label="Follow Shine on Farcaster" className="text-white opacity-60 hover:opacity-100">
+                <a href="https://farcaster.xyz/shinemusic" target="_blank" rel="noopener noreferrer" aria-label="Follow Shine on Farcaster" className="text-white opacity-60 hover:opacity-100">
                   <FarcasterIcon className="w-6 h-6" />
                 </a>
-                <a href="mailto:hello@shine.music" aria-label="Email Shine" className="text-white opacity-60 hover:opacity-100">
+                <a href="mailto:shinemusic.xyz@gmail.com" aria-label="Email Shine" className="text-white opacity-60 hover:opacity-100">
                   <Mail className="w-6 h-6" />
                 </a>
               </div>
