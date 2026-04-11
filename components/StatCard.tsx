@@ -37,16 +37,16 @@ export default function StatCard({ value, label, context, prefix = "", suffix = 
 
   return (
     <motion.div
-      className="bg-[rgba(255,255,255,0.04)] backdrop-blur-[20px] border border-[rgba(255,255,255,0.08)] rounded-2xl p-6 hover:bg-[rgba(255,255,255,0.08)] hover:border-[rgba(255,255,255,0.15)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(239,68,68,0.1)]"
+      className="bg-[rgba(255,255,255,0.04)] backdrop-blur-[20px] border border-[rgba(255,255,255,0.08)] rounded-xl p-4 hover:bg-[rgba(255,255,255,0.08)] hover:border-[rgba(255,255,255,0.15)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(239,68,68,0.1)]"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
     >
-      <div className="font-[family-name:var(--font-mono)] text-5xl md:text-6xl font-bold text-accent mb-2">
+      <div className="font-[family-name:var(--font-mono)] text-3xl md:text-4xl font-bold text-accent mb-1">
         <AnimatedNumber value={num} prefix={prefix} suffix={suffix} />
       </div>
-      <div className="text-white font-semibold text-lg mb-1">{label}</div>
-      <div className="text-text-secondary text-sm">{context}</div>
+      <div className="text-white font-semibold text-sm mb-0.5">{label}</div>
+      <div className="text-text-secondary text-xs">{context}</div>
     </motion.div>
   );
 }

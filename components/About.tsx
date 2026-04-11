@@ -35,7 +35,7 @@ export default function About() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl font-bold text-white mb-8">
+            <h2 className="font-[family-name:var(--font-display)] uppercase text-4xl md:text-5xl font-bold text-white mb-8">
               What is Shine?
             </h2>
 
@@ -57,11 +57,11 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
             {/* Animated equalizer visualization */}
-            <div className="relative w-64 h-64 flex items-end justify-center gap-2">
+            <div className="relative w-44 h-44 flex items-end justify-center gap-1.5">
               {[...Array(12)].map((_, i) => (
                 <motion.div
                   key={i}
-                  className="w-3 rounded-full bg-gradient-to-t from-accent to-accent-light"
+                  className="w-2 rounded-full bg-gradient-to-t from-accent to-accent-light"
                   animate={{
                     height: [
                       `${20 + Math.random() * 40}%`,
@@ -86,7 +86,7 @@ export default function About() {
         </div>
 
         {/* Feature cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12 max-w-4xl mx-auto">
           {features.map((feature, i) => (
             <motion.div
               key={feature.title}
@@ -95,10 +95,10 @@ export default function About() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: i * 0.1, ease: "easeOut" }}
             >
-              <GlassCard className="h-full">
-                <feature.icon className="w-8 h-8 text-accent mb-4" />
-                <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-text-secondary text-sm leading-relaxed">{feature.description}</p>
+              <GlassCard className="h-full !p-4 !rounded-xl">
+                <feature.icon className="w-6 h-6 text-accent mb-2" />
+                <h3 className="text-sm font-bold text-white mb-1">{feature.title}</h3>
+                <p className="text-text-secondary text-xs leading-relaxed">{feature.description}</p>
               </GlassCard>
             </motion.div>
           ))}

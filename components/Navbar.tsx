@@ -65,7 +65,7 @@ export default function Navbar() {
           >
             <nav className="max-w-7xl mx-auto px-6 h-16 md:h-16 flex items-center justify-between">
               {/* Logo */}
-              <a href="#" className="font-[family-name:var(--font-display)] text-lg font-bold text-white">
+              <a href="#" className="font-[family-name:var(--font-display)] uppercase text-lg font-bold text-white">
                 SHINE
               </a>
 
@@ -133,7 +133,7 @@ export default function Navbar() {
                 <motion.a
                   key={link.href}
                   href={link.href}
-                  className="text-2xl text-white font-[family-name:var(--font-display)]"
+                  className="text-2xl text-white font-[family-name:var(--font-display)] uppercase"
                   onClick={() => setMobileOpen(false)}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}

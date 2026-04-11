@@ -1,5 +1,34 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Druk";
+  src: url("/fonts/Druk-Font-Family/Druk%20Family/Druk-Medium-Trial.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Druk";
+  src: url("/fonts/Druk-Font-Family/Druk%20Family/Druk-Bold-Trial.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Druk";
+  src: url("/fonts/Druk-Font-Family/Druk%20Family/Druk-Heavy-Trial.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Druk";
+  src: url("/fonts/Druk-Font-Family/Druk%20Family/Druk-Super-Trial.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-bg-primary: #000000;
   --color-bg-glass: rgba(255, 255, 255, 0.04);
@@ -14,7 +43,7 @@
   --color-error: #EF4444;
   --color-success: #22C55E;
 
-  --font-display: "Syne", sans-serif;
+  --font-display: "Druk", sans-serif;
   --font-body: "DM Sans", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 

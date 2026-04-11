@@ -44,7 +44,7 @@ export default function Footer() {
 
       <div className="max-w-5xl mx-auto text-center">
         <motion.h3
-          className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-white mb-8"
+          className="font-[family-name:var(--font-display)] uppercase text-2xl md:text-3xl font-bold text-white mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -77,7 +77,7 @@ export default function Footer() {
 
         {/* Branding */}
         <div className="space-y-3">
-          <p className="font-[family-name:var(--font-display)] text-xl md:text-2xl font-bold text-white opacity-60">
+          <p className="font-[family-name:var(--font-display)] uppercase text-xl md:text-2xl font-bold text-white opacity-60">
             SHINE
           </p>
           <p className="text-sm text-slate-500">

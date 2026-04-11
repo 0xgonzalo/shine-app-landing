@@ -59,7 +59,7 @@ export default function Newsletter() {
     <section id="newsletter" className="relative py-24 md:py-32 px-6">
       <div className="max-w-lg mx-auto text-center">
         <motion.h2
-          className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-white mb-4"
+          className="font-[family-name:var(--font-display)] uppercase text-3xl md:text-4xl font-bold text-white mb-4"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}

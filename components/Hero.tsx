@@ -1,48 +1,52 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/bg-hero.png')" }}
+      {/* Background video */}
+      <video
+        className="absolute inset-0 z-0 h-full w-full object-cover"
+        src="/bg-hero.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster="/bg-hero.png"
         aria-hidden="true"
       />
       {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 z-0 bg-black/40" aria-hidden="true" />
+      <div className="absolute inset-0 z-0 bg-black/60" aria-hidden="true" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl">
-        <motion.h1
-          className="font-[family-name:var(--font-display)] text-[clamp(2.5rem,10vw,7rem)] font-extrabold leading-none tracking-[0.05em] text-white mb-5"
-          style={{ textShadow: "0 0 80px rgba(37,99,235,0.3)" }}
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
+          className="mb-6"
         >
-          SHINE
-        </motion.h1>
+          <Image
+            src="/logo.png"
+            alt="Shine"
+            width={1340}
+            height={880}
+            priority
+            sizes="(max-width: 768px) 55vw, (max-width: 1280px) 40vw, 520px"
+            className="mx-auto w-[min(55vw,520px)] h-auto drop-shadow-[0_0_80px_rgba(37,99,235,0.35)]"
+          />
+        </motion.div>
 
         <motion.p
-          className="text-lg md:text-xl lg:text-2xl text-white font-normal mb-3"
+          className="text-lg md:text-xl lg:text-2xl text-white font-normal mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         >
           Music belongs to those who create it.
-        </motion.p>
-
-        <motion.p
-          className="text-sm md:text-base text-text-secondary mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-        >
-          No middlemen. No algorithms. Just music.
         </motion.p>
 
         <motion.a
@@ -52,7 +56,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
         >
-          Join the Movement
+          Join Us
         </motion.a>
       </div>
 
