@@ -27,12 +27,35 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true, message: "Successfully subscribed" });
   } catch (error: unknown) {
-    const mailchimpError = error as { status?: number; response?: { body?: { title?: string } } };
+    const mailchimpError = error as {
+      status?: number;
+      response?: { body?: { title?: string; detail?: string } };
+    };
 
-    if (mailchimpError.status === 400 && mailchimpError.response?.body?.title === "Member Exists") {
+    const title = mailchimpError.response?.body?.title;
+    const detail = mailchimpError.response?.body?.detail;
+
+    console.error("[/api/subscribe] Mailchimp error", {
+      status: mailchimpError.status,
+      title,
+      detail,
+    });
+
+    if (mailchimpError.status === 400 && title === "Member Exists") {
       return NextResponse.json(
         { success: false, error: "You're already subscribed! We'll keep you updated." },
         { status: 409 }
+      );
+    }
+
+    if (mailchimpError.status === 400 && title === "Invalid Resource") {
+      return NextResponse.json(
+        {
+          success: false,
+          error:
+            detail ?? "That email address looks invalid. Please use a real email.",
+        },
+        { status: 400 }
       );
     }
 
