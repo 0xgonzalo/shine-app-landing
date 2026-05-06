@@ -84,10 +84,10 @@ export default function Navbar() {
 
               {/* Social icons (desktop) */}
               <div className="hidden md:flex items-center gap-4">
-                <a href="https://x.com/Shinemusic_xyz" target="_blank" rel="noopener noreferrer" aria-label="Follow Shine on X" className="text-white opacity-60 hover:opacity-100 transition-opacity">
+                <a href="https://x.com/Shinemusic_app" target="_blank" rel="noopener noreferrer" aria-label="Follow Shine on X" className="text-white opacity-60 hover:opacity-100 transition-opacity">
                   <XIcon className="w-5 h-5" />
                 </a>
-                <a href="https://www.instagram.com/shinemusic.xyz/" target="_blank" rel="noopener noreferrer" aria-label="Follow Shine on Instagram" className="text-white opacity-60 hover:opacity-100 transition-opacity">
+                <a href="https://www.instagram.com/shinemusic.app/" target="_blank" rel="noopener noreferrer" aria-label="Follow Shine on Instagram" className="text-white opacity-60 hover:opacity-100 transition-opacity">
                   <InstagramIcon className="w-5 h-5" />
                 </a>
                 <a href="https://farcaster.xyz/shinemusic" target="_blank" rel="noopener noreferrer" aria-label="Follow Shine on Farcaster" className="text-white opacity-60 hover:opacity-100 transition-opacity">
