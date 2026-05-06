@@ -30,8 +30,8 @@ function FarcasterIcon({ className }: { className?: string }) {
 }
 
 const socials = [
-  { icon: XIcon, label: "Follow Shine on X", href: "https://x.com/Shinemusic_xyz" },
-  { icon: InstagramIcon, label: "Follow Shine on Instagram", href: "https://www.instagram.com/shinemusic.xyz/" },
+  { icon: XIcon, label: "Follow Shine on X", href: "https://x.com/Shinemusic_app" },
+  { icon: InstagramIcon, label: "Follow Shine on Instagram", href: "https://www.instagram.com/shinemusic.app/" },
   { icon: FarcasterIcon, label: "Follow Shine on Farcaster", href: "https://farcaster.xyz/shinemusic" },
   { icon: Mail, label: "Email Shine", href: "mailto:shinemusic.xyz@gmail.com" },
 ];

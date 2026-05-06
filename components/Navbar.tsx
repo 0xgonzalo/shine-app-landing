@@ -144,10 +144,10 @@ export default function Navbar() {
               ))}
 
               <div className="flex items-center gap-6 mt-8">
-                <a href="https://x.com/Shinemusic_xyz" target="_blank" rel="noopener noreferrer" aria-label="Follow Shine on X" className="text-white opacity-60 hover:opacity-100">
+                <a href="https://x.com/Shinemusic_app" target="_blank" rel="noopener noreferrer" aria-label="Follow Shine on X" className="text-white opacity-60 hover:opacity-100">
                   <XIcon className="w-6 h-6" />
                 </a>
-                <a href="https://www.instagram.com/shinemusic.xyz/" target="_blank" rel="noopener noreferrer" aria-label="Follow Shine on Instagram" className="text-white opacity-60 hover:opacity-100">
+                <a href="https://www.instagram.com/shinemusic.app/" target="_blank" rel="noopener noreferrer" aria-label="Follow Shine on Instagram" className="text-white opacity-60 hover:opacity-100">
                   <InstagramIcon className="w-6 h-6" />
                 </a>
                 <a href="https://farcaster.xyz/shinemusic" target="_blank" rel="noopener noreferrer" aria-label="Follow Shine on Farcaster" className="text-white opacity-60 hover:opacity-100">
