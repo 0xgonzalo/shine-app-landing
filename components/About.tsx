@@ -1,28 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Heart, Disc3, Zap } from "lucide-react";
+import { Heart, Disc3 } from "lucide-react";
 import GlassCard from "./GlassCard";
-
-const features = [
-  {
-    icon: Heart,
-    title: "Direct Support",
-    description: "100% of your purchase goes to the artist. No hidden fees, no label cuts.",
-  },
-  {
-    icon: Disc3,
-    title: "Collectible Music",
-    description: "Songs are unique collectibles. Your collection is yours to own and display.",
-  },
-  {
-    icon: Zap,
-    title: "No Crypto Needed",
-    description: "Web3 power, Web2 simplicity. No wallets, no gas fees, no jargon.",
-  },
-];
+import { useLanguage } from "@/lib/i18n";
 
 export default function About() {
+  const { t } = useLanguage();
+  const features = [
+    {
+      icon: Heart,
+      title: t.about.features.directSupportTitle,
+      description: t.about.features.directSupportDesc,
+    },
+    {
+      icon: Disc3,
+      title: t.about.features.collectibleTitle,
+      description: t.about.features.collectibleDesc,
+    },
+  ];
   return (
     <section id="about" className="relative py-24 md:py-32 px-6">
       <div className="max-w-7xl mx-auto">
@@ -36,15 +32,15 @@ export default function About() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <h2 className="font-[family-name:var(--font-display)] uppercase text-4xl md:text-5xl font-bold text-white mb-8">
-              What is Shine?
+              {t.about.heading}
             </h2>
 
             <p className="text-lg md:text-xl text-white/90 mb-6 leading-relaxed">
-              Shine is a platform that connects artists and fans for real. No middlemen. No algorithms. No invisible contracts. When you love a song, you can buy it, collect it, and directly support the person who created it.
+              {t.about.paragraph1}
             </p>
 
             <p className="text-base md:text-lg text-text-secondary leading-relaxed">
-              Music has value again. Not because of views or streams, but because of what it means to you. Every purchase on Shine is a statement: this matters to me.
+              {t.about.paragraph2}
             </p>
           </motion.div>
 
@@ -86,7 +82,7 @@ export default function About() {
         </div>
 
         {/* Feature cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12 max-w-2xl mx-auto">
           {features.map((feature, i) => (
             <motion.div
               key={feature.title}

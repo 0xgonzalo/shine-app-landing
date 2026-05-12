@@ -4,10 +4,12 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, Loader2 } from "lucide-react";
 import { subscribeSchema } from "@/lib/validations";
+import { useLanguage } from "@/lib/i18n";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
 export default function Newsletter() {
+  const { t } = useLanguage();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [formState, setFormState] = useState<FormState>("idle");
@@ -24,8 +26,10 @@ export default function Newsletter() {
       const fieldErrors: { name?: string; email?: string } = {};
       for (const issue of result.error.issues) {
         const field = issue.path[0] as string;
-        if (field === "name" || field === "email") {
-          fieldErrors[field] = issue.message;
+        if (field === "name") {
+          fieldErrors.name = t.newsletter.nameRequired;
+        } else if (field === "email") {
+          fieldErrors.email = t.newsletter.emailInvalid;
         }
       }
       setErrors(fieldErrors);
@@ -46,11 +50,11 @@ export default function Newsletter() {
       if (res.ok && data.success) {
         setFormState("success");
       } else {
-        setApiError(data.error || "Something went wrong. Please try again.");
+        setApiError(data.error || t.newsletter.genericError);
         setFormState("error");
       }
     } catch {
-      setApiError("Something went wrong. Please try again.");
+      setApiError(t.newsletter.genericError);
       setFormState("error");
     }
   };
@@ -65,7 +69,7 @@ export default function Newsletter() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
         >
-          Be part of what&rsquo;s next.
+          {t.newsletter.heading}
         </motion.h2>
 
         <motion.p
@@ -75,7 +79,7 @@ export default function Newsletter() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.1 }}
         >
-          Join our community of artists and fans building a fairer music industry. Get early access, exclusive updates, and be the first to know when Shine launches.
+          {t.newsletter.description}
         </motion.p>
 
         <motion.div
@@ -97,7 +101,7 @@ export default function Newsletter() {
                 <div className="w-16 h-16 rounded-full bg-success/20 flex items-center justify-center">
                   <Check className="w-8 h-8 text-success" />
                 </div>
-                <p className="text-xl font-bold text-white">Welcome to Shine. You&rsquo;re in.</p>
+                <p className="text-xl font-bold text-white">{t.newsletter.successTitle}</p>
               </motion.div>
             ) : (
               <motion.form
@@ -110,14 +114,14 @@ export default function Newsletter() {
                 <div>
                   <input
                     type="text"
-                    placeholder="Your name"
+                    placeholder={t.newsletter.namePlaceholder}
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     disabled={formState === "submitting"}
                     className={`w-full bg-white/5 border rounded-xl p-3.5 px-5 text-white placeholder:text-slate-500 outline-none transition-colors focus:border-accent ${
                       errors.name ? "border-error" : "border-[rgba(255,255,255,0.1)]"
                     }`}
-                    aria-label="Your name"
+                    aria-label={t.newsletter.namePlaceholder}
                     aria-describedby={errors.name ? "name-error" : undefined}
                   />
                   {errors.name && (
@@ -128,14 +132,14 @@ export default function Newsletter() {
                 <div>
                   <input
                     type="email"
-                    placeholder="your@email.com"
+                    placeholder={t.newsletter.emailPlaceholder}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     disabled={formState === "submitting"}
                     className={`w-full bg-white/5 border rounded-xl p-3.5 px-5 text-white placeholder:text-slate-500 outline-none transition-colors focus:border-accent ${
                       errors.email ? "border-error" : "border-[rgba(255,255,255,0.1)]"
                     }`}
-                    aria-label="Your email"
+                    aria-label={t.newsletter.emailPlaceholder}
                     aria-describedby={errors.email ? "email-error" : undefined}
                   />
                   {errors.email && (
@@ -155,10 +159,10 @@ export default function Newsletter() {
                   {formState === "submitting" ? (
                     <>
                       <Loader2 className="w-5 h-5 animate-spin" />
-                      Joining...
+                      {t.newsletter.submitting}
                     </>
                   ) : (
-                    "Join Shine"
+                    t.newsletter.submit
                   )}
                 </button>
               </motion.form>

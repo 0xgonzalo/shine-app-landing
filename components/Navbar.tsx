@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Mail } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -15,9 +16,8 @@ function InstagramIcon({ className }: { className?: string }) {
 }
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "The Problem", href: "#the-problem" },
-  { label: "Newsletter", href: "#newsletter" },
+  { key: "about" as const, href: "#about" },
+  { key: "newsletter" as const, href: "#newsletter" },
 ];
 
 function XIcon({ className }: { className?: string }) {
@@ -36,9 +36,23 @@ function FarcasterIcon({ className }: { className?: string }) {
   );
 }
 
+function LanguageToggle({ lang, onToggle, t, className }: { lang: "en" | "es"; onToggle: () => void; t: string; className?: string }) {
+  return (
+    <button
+      type="button"
+      onClick={onToggle}
+      aria-label={t}
+      className={className ?? "text-xs font-bold tracking-wider text-white/70 hover:text-white border border-white/15 hover:border-white/40 rounded-full px-3 py-1.5 transition-colors"}
+    >
+      {lang === "en" ? "ES" : "EN"}
+    </button>
+  );
+}
+
 export default function Navbar() {
   const [visible, setVisible] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { lang, toggle, t } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -77,7 +91,7 @@ export default function Navbar() {
                     href={link.href}
                     className="text-sm text-text-secondary hover:text-white transition-colors"
                   >
-                    {link.label}
+                    {t.nav[link.key]}
                   </a>
                 ))}
               </div>
@@ -96,16 +110,20 @@ export default function Navbar() {
                 <a href="mailto:shinemusic.xyz@gmail.com" aria-label="Email Shine" className="text-white opacity-60 hover:opacity-100 transition-opacity">
                   <Mail className="w-5 h-5" />
                 </a>
+                <LanguageToggle lang={lang} onToggle={toggle} t={t.nav.switchLanguage} />
               </div>
 
-              {/* Mobile menu button */}
-              <button
-                className="md:hidden text-white"
-                onClick={() => setMobileOpen(true)}
-                aria-label="Open menu"
-              >
-                <Menu className="w-6 h-6" />
-              </button>
+              {/* Mobile actions */}
+              <div className="md:hidden flex items-center gap-3">
+                <LanguageToggle lang={lang} onToggle={toggle} t={t.nav.switchLanguage} />
+                <button
+                  className="text-white"
+                  onClick={() => setMobileOpen(true)}
+                  aria-label="Open menu"
+                >
+                  <Menu className="w-6 h-6" />
+                </button>
+              </div>
             </nav>
           </motion.header>
         )}
@@ -139,7 +157,7 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                 >
-                  {link.label}
+                  {t.nav[link.key]}
                 </motion.a>
               ))}
 

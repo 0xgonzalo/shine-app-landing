@@ -3,8 +3,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
 
 export default function Hero() {
+  const { t } = useLanguage();
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background video */}
@@ -46,7 +48,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         >
-          Music belongs to those who create it.
+          {t.hero.tagline}
         </motion.p>
 
         <motion.a
@@ -56,7 +58,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
         >
-          Join Us
+          {t.hero.cta}
         </motion.a>
       </div>
 

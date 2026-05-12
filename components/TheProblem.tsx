@@ -2,39 +2,40 @@
 
 import { motion } from "framer-motion";
 import StatCard from "./StatCard";
-
-const stats = [
-  {
-    value: "12",
-    label: "Artist revenue share",
-    context: "Of the $43B generated annually, artists receive only 12 cents of every dollar.",
-    suffix: "%",
-    numericValue: 12,
-  },
-  {
-    value: "0.003",
-    label: "Per stream average",
-    context: "An artist needs ~350,000 streams to earn a US minimum wage month.",
-    prefix: "$",
-    numericValue: 0.003,
-  },
-  {
-    value: "70",
-    label: "Revenue to middlemen",
-    context: "Labels, distributors, and platforms absorb the majority before artists see a cent.",
-    suffix: "%",
-    numericValue: 70,
-  },
-  {
-    value: "0",
-    label: "Transparency",
-    context: "Most artists have no visibility into how their royalties are calculated or distributed.",
-    suffix: "%",
-    numericValue: 0,
-  },
-];
+import { useLanguage } from "@/lib/i18n";
 
 export default function TheProblem() {
+  const { t } = useLanguage();
+  const stats = [
+    {
+      value: "12",
+      label: t.problem.stats.revenueShareLabel,
+      context: t.problem.stats.revenueShareContext,
+      suffix: "%",
+      numericValue: 12,
+    },
+    {
+      value: "0.003",
+      label: t.problem.stats.perStreamLabel,
+      context: t.problem.stats.perStreamContext,
+      prefix: "$",
+      numericValue: 0.003,
+    },
+    {
+      value: "70",
+      label: t.problem.stats.middlemenLabel,
+      context: t.problem.stats.middlemenContext,
+      suffix: "%",
+      numericValue: 70,
+    },
+    {
+      value: "0",
+      label: t.problem.stats.transparencyLabel,
+      context: t.problem.stats.transparencyContext,
+      suffix: "%",
+      numericValue: 0,
+    },
+  ];
   return (
     <section id="the-problem" className="relative py-16 md:py-20 px-6">
       {/* Darker gradient overlay for visual separation */}
@@ -49,7 +50,7 @@ export default function TheProblem() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          Something is broken.
+          {t.problem.heading}
         </motion.h2>
 
         {/* Body text */}
@@ -60,7 +61,7 @@ export default function TheProblem() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
-          The music industry makes $43B a year. Artists see just 12% of it. The rest goes to middlemen.
+          {t.problem.body}
         </motion.p>
 
         {/* Stats grid */}

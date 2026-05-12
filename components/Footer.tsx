@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Mail } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -37,6 +38,7 @@ const socials = [
 ];
 
 export default function Footer() {
+  const { t } = useLanguage();
   return (
     <footer className="relative py-20 md:py-24 px-6">
       {/* Glass divider */}
@@ -50,7 +52,7 @@ export default function Footer() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6 }}
         >
-          Connect with Shine
+          {t.footer.heading}
         </motion.h3>
 
         {/* Social icons */}
@@ -81,10 +83,10 @@ export default function Footer() {
             SHINE
           </p>
           <p className="text-sm text-slate-500">
-            Music belongs to those who create it.
+            {t.footer.tagline}
           </p>
           <p className="text-xs text-slate-600">
-            &copy; 2026 Shine. All rights reserved.
+            {t.footer.copyright}
           </p>
         </div>
       </div>
