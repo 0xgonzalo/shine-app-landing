@@ -31,7 +31,7 @@ export default function About() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="font-[family-name:var(--font-display)] uppercase text-4xl md:text-5xl font-bold text-white mb-8">
+            <h2 className="font-[family-name:var(--font-display-wide)] text-4xl md:text-5xl font-bold text-white mb-8">
               {t.about.heading}
             </h2>
 

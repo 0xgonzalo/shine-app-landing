@@ -38,7 +38,7 @@ export default function Hero() {
             height={880}
             priority
             sizes="(max-width: 768px) 55vw, (max-width: 1280px) 40vw, 520px"
-            className="mx-auto w-[min(55vw,520px)] h-auto drop-shadow-[0_0_80px_rgba(37,99,235,0.35)]"
+            className="mx-auto w-[min(55vw,520px)] h-auto drop-shadow-[0_0_80px_rgba(0,0,254,0.4)]"
           />
         </motion.div>
 
@@ -53,7 +53,7 @@ export default function Hero() {
 
         <motion.a
           href="#newsletter"
-          className="inline-block bg-accent text-white font-semibold px-8 py-3 rounded-full text-base transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_40px_rgba(37,99,235,0.4)]"
+          className="inline-block bg-accent text-text-primary font-semibold px-8 py-3 rounded-full text-base transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_40px_rgba(0,0,254,0.55)]"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}

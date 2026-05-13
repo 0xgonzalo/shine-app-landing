@@ -44,7 +44,7 @@ export default function TheProblem() {
       <div className="relative max-w-4xl mx-auto text-center">
         {/* Headline */}
         <motion.h2
-          className="font-[family-name:var(--font-display)] uppercase text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
+          className="font-[family-name:var(--font-display-wide)] uppercase text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}

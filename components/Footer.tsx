@@ -70,7 +70,7 @@ export default function Footer() {
               aria-label={social.label}
               target={social.href.startsWith("mailto") ? undefined : "_blank"}
               rel={social.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-              className="w-12 h-12 rounded-full bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.08)] flex items-center justify-center text-white opacity-50 hover:opacity-100 hover:scale-110 hover:shadow-[0_0_30px_rgba(37,99,235,0.2)] transition-all duration-300"
+              className="w-12 h-12 rounded-full bg-[rgba(239,238,234,0.04)] border border-[rgba(239,238,234,0.08)] flex items-center justify-center text-text-primary opacity-50 hover:opacity-100 hover:scale-110 hover:shadow-[0_0_30px_rgba(140,82,255,0.3)] transition-all duration-300"
             >
               <social.icon className="w-5 h-5" />
             </a>

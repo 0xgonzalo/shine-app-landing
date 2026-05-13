@@ -63,7 +63,7 @@ export default function Newsletter() {
     <section id="newsletter" className="relative py-24 md:py-32 px-6">
       <div className="max-w-lg mx-auto text-center">
         <motion.h2
-          className="font-[family-name:var(--font-display)] uppercase text-3xl md:text-4xl font-bold text-white mb-4"
+          className="font-[family-name:var(--font-display-wide)] uppercase text-3xl md:text-4xl font-bold text-white mb-4"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -83,7 +83,7 @@ export default function Newsletter() {
         </motion.p>
 
         <motion.div
-          className="bg-[rgba(255,255,255,0.04)] backdrop-blur-[20px] border border-[rgba(255,255,255,0.08)] rounded-3xl p-8 shadow-[0_0_80px_rgba(37,99,235,0.12)]"
+          className="bg-[rgba(239,238,234,0.04)] backdrop-blur-[20px] border border-[rgba(239,238,234,0.08)] rounded-3xl p-8 shadow-[0_0_80px_rgba(0,0,254,0.15)]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -154,7 +154,7 @@ export default function Newsletter() {
                 <button
                   type="submit"
                   disabled={formState === "submitting"}
-                  className="mt-2 w-full h-12 bg-accent text-white font-bold rounded-full transition-all duration-300 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="mt-2 w-full h-12 bg-accent text-text-primary font-bold rounded-full transition-all duration-300 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {formState === "submitting" ? (
                     <>

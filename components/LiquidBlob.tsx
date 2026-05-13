@@ -23,7 +23,7 @@ function BlobSphere() {
   return (
     <Sphere ref={meshRef} args={[1.5, 128, 128]}>
       <MeshDistortMaterial
-        color="#2563EB"
+        color="#0000FE"
         attach="material"
         distort={0.4}
         speed={1.5}
@@ -64,7 +64,7 @@ function FloatingParticles() {
           args={[positions, 3]}
         />
       </bufferGeometry>
-      <pointsMaterial size={0.02} color="#60A5FA" transparent opacity={0.6} sizeAttenuation />
+      <pointsMaterial size={0.02} color="#8C52FF" transparent opacity={0.7} sizeAttenuation />
     </points>
   );
 }
@@ -80,7 +80,7 @@ export default function LiquidBlob() {
       >
         <ambientLight intensity={0.5} />
         <directionalLight position={[5, 5, 5]} intensity={1} />
-        <pointLight position={[-5, -5, -5]} intensity={0.5} color="#2563EB" />
+        <pointLight position={[-5, -5, -5]} intensity={0.5} color="#8C52FF" />
         <BlobSphere />
         <FloatingParticles />
         <Environment preset="night" />
