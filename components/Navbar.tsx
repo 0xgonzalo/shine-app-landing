@@ -79,8 +79,8 @@ export default function Navbar() {
           >
             <nav className="max-w-7xl mx-auto px-6 h-16 md:h-16 flex items-center justify-between">
               {/* Logo */}
-              <a href="#" className="font-[family-name:var(--font-display)] uppercase text-lg font-bold text-white">
-                SHINE
+              <a href="#" aria-label="Shine" className="flex items-center">
+                <img src="/logo.png" alt="Shine" className="h-7 w-auto" />
               </a>
 
               {/* Desktop links */}

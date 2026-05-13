@@ -78,10 +78,10 @@ export const translations = {
     },
     hero: {
       tagline: "La música le pertenece a quien la crea.",
-      cta: "Súmate",
+      cta: "Sumate",
     },
     about: {
-      heading: "¿Qué es Shine?",
+      heading: "¿QUE ES SHINE?",
       paragraph1:
         "Shine es una plataforma que conecta artistas y fans de verdad. Sin intermediarios. Sin algoritmos. Cuando una canción te gusta, podés comprarla, coleccionarla y apoyar directamente a la persona que la creó, ya sea con una compra o con propinas virtuales durante un show en vivo.",
       paragraph2:
@@ -96,7 +96,7 @@ export const translations = {
       },
     },
     problem: {
-      heading: "Algo está roto.",
+      heading: "ALGO ESTA ROTO.",
       body:
         "La industria de la música genera 43.000 millones de dólares al año. Los artistas reciben apenas el 12%. El resto se lo llevan los intermediarios.",
       stats: {

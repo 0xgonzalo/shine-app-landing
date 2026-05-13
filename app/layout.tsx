@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   title: "Shine — Music belongs to those who create it",
   description:
     "A platform connecting artists and fans directly. No middlemen, no algorithms. Support the music you love.",
+  icons: {
+    icon: "/icon.ico",
+    shortcut: "/icon.ico",
+    apple: "/icon.ico",
+  },
   openGraph: {
     title: "Shine — Music belongs to those who create it",
     description:
