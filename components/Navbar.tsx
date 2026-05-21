@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Mail } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
+import LaunchAppButton from "./LaunchAppButton";
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -68,6 +69,22 @@ export default function Navbar() {
 
   return (
     <>
+      {/* Floating launcher — only over the hero, before the scroll-revealed
+          navbar takes over. Avoids overlapping the navbar's social cluster. */}
+      <AnimatePresence>
+        {!visible && (
+          <motion.div
+            className="fixed top-4 right-4 md:top-5 md:right-6 z-[70]"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+          >
+            <LaunchAppButton />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <AnimatePresence>
         {visible && (
           <motion.header
@@ -111,6 +128,7 @@ export default function Navbar() {
                   <Mail className="w-5 h-5" />
                 </a>
                 <LanguageToggle lang={lang} onToggle={toggle} t={t.nav.switchLanguage} />
+                <LaunchAppButton />
               </div>
 
               {/* Mobile actions */}
