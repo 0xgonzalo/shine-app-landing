@@ -12,6 +12,7 @@ export const translations = {
       about: "About",
       newsletter: "Newsletter",
       switchLanguage: "Cambiar a español",
+      launchApp: "Launch App",
     },
     hero: {
       tagline: "Music belongs to those who create it.",
@@ -75,6 +76,7 @@ export const translations = {
       about: "Sobre Shine",
       newsletter: "Newsletter",
       switchLanguage: "Switch to English",
+      launchApp: "Abrir App",
     },
     hero: {
       tagline: "La música le pertenece a quien la crea.",
