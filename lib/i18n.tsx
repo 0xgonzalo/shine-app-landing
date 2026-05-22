@@ -55,7 +55,7 @@ export const translations = {
     newsletter: {
       heading: "Be part of what’s next.",
       description:
-        "Join our community of artists and fans. We’re building a fairer music industry — get early access, exclusive updates, and be the first to know when Shine launches.",
+        "Join our newsletter and get early access to the private beta, plus upcoming features and news straight to your inbox.",
       namePlaceholder: "Your name",
       emailPlaceholder: "your@email.com",
       submit: "Join Shine",
@@ -119,7 +119,7 @@ export const translations = {
     newsletter: {
       heading: "Sumate a lo que viene.",
       description:
-        "Unite a nuestra comunidad de artistas y fans. Estamos construyendo una industria más justa — accedé primero, recibí novedades exclusivas y entérate antes que nadie cuando Shine lance.",
+        "Suscribite al newsletter y accedé primero a la beta privada, además de novedades y nuevas features directo a tu inbox.",
       namePlaceholder: "Tu nombre",
       emailPlaceholder: "tu@email.com",
       submit: "Unirme a Shine",

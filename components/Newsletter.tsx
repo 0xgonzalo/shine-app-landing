@@ -9,7 +9,7 @@ import { useLanguage } from "@/lib/i18n";
 type FormState = "idle" | "submitting" | "success" | "error";
 
 export default function Newsletter() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [formState, setFormState] = useState<FormState>("idle");
@@ -42,7 +42,7 @@ export default function Newsletter() {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email }),
+        body: JSON.stringify({ name, email, lang }),
       });
 
       const data = await res.json();
