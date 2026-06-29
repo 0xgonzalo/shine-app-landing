@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Check, Loader2 } from "lucide-react";
 import { subscribeSchema } from "@/lib/validations";
 import { useLanguage } from "@/lib/i18n";
+import SuccessModal from "@/components/SuccessModal";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
@@ -15,6 +16,7 @@ export default function Newsletter() {
   const [formState, setFormState] = useState<FormState>("idle");
   const [errors, setErrors] = useState<{ name?: string; email?: string }>({});
   const [apiError, setApiError] = useState("");
+  const [showModal, setShowModal] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,6 +51,7 @@ export default function Newsletter() {
 
       if (res.ok && data.success) {
         setFormState("success");
+        setShowModal(true);
       } else {
         setApiError(data.error || t.newsletter.genericError);
         setFormState("error");
@@ -170,6 +173,8 @@ export default function Newsletter() {
           </AnimatePresence>
         </motion.div>
       </div>
+
+      <SuccessModal open={showModal} onClose={() => setShowModal(false)} />
     </section>
   );
 }

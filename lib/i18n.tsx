@@ -64,6 +64,12 @@ export const translations = {
       genericError: "Something went wrong. Please try again.",
       nameRequired: "Name is required",
       emailInvalid: "Please enter a valid email",
+      modal: {
+        title: "You’re in!",
+        body:
+          "Congrats on subscribing to the Shine Newsletter! We’ll give you access to the app beta shortly, and we hope you can share your feedback with us.",
+        close: "Got it",
+      },
     },
     footer: {
       heading: "Connect with Shine",
@@ -128,6 +134,12 @@ export const translations = {
       genericError: "Algo salió mal. Intentalo de nuevo.",
       nameRequired: "El nombre es obligatorio",
       emailInvalid: "Ingresá un email válido",
+      modal: {
+        title: "¡Ya estás adentro!",
+        body:
+          "¡Felicitaciones por suscribirte al Newsletter de Shine! En breve vamos a darte acceso a la beta de la app y esperamos que nos puedas dar tu feedback.",
+        close: "Listo",
+      },
     },
     footer: {
       heading: "Conectá con Shine",
