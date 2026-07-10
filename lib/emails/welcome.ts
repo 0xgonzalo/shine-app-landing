@@ -58,8 +58,8 @@ const WELCOME_BY_LANG: Record<Language, (name: string) => WelcomeEmail> = {
 
     const bodyHtml = `
       <h1 style="margin:0 0 24px;font-size:24px;line-height:1.3;color:#0000FE;">Hola ${name}, bienvenido/a a Shine 💎</h1>
-      <p style="margin:0 0 16px;">Escaneaste el QR. Eso significa que sos parte de algo que todavía no existe para el resto del mundo.</p>
-      <p style="margin:0 0 16px;">Shine es una plataforma donde los músicos independientes venden su música directamente a sus fans. Sin intermediarios. Sin algoritmos. La plata llega directo al artista. Además de esto van a poder recibir propinas digitales en tiempo real entre otras cositas muy interesantes que están planeadas a lo largo del año.</p>
+      <p style="margin:0 0 16px;">Ya estás adentro de la beta privada! Eso significa que sos parte de algo que todavía no existe para el resto del mundo.</p>
+      <p style="margin:0 0 16px;">Shine es una plataforma donde los músicos independientes venden su música directamente a sus fans. Sin intermediarios. Sin algoritmos. El dinero llega directo al artista. Además de esto van a poder recibir propinas digitales en tiempo real entre otras cositas muy interesantes que están planeadas a lo largo del año.</p>
       <p style="margin:0 0 16px;">En Septiembre abre para todo el mundo, pero vos ya sos parte, sentite especial!</p>
       <p style="margin:0 0 16px;">En las próximas semanas te vamos a ir contando cómo va el proceso, qué estamos construyendo y cuándo vas a poder ser de los primeros en entrar al beta exclusivo.</p>
       <p style="margin:0 0 16px;">Mandaselo a tu amigo músico independiente que sabés que necesita esta herramienta!</p>
@@ -70,7 +70,7 @@ const WELCOME_BY_LANG: Record<Language, (name: string) => WelcomeEmail> = {
 
     const text = `Hola ${name}, bienvenido/a a Shine!
 
-Escaneaste el QR. Eso significa que sos parte de algo que todavía no existe para el resto del mundo.
+Ya estás adentro de la beta privada! Eso significa que sos parte de algo que todavía no existe para el resto del mundo.
 
 Shine es una plataforma donde los músicos independientes venden su música directamente a sus fans. Sin intermediarios. Sin algoritmos. La plata llega directo al artista. Además de esto van a poder recibir propinas digitales en tiempo real entre otras cositas muy interesantes que están planeadas a lo largo del año.
 
@@ -101,7 +101,7 @@ shinemusic.app`;
 
     const bodyHtml = `
       <h1 style="margin:0 0 24px;font-size:24px;line-height:1.3;color:#0000FE;">Hi ${name}, welcome to Shine 💎</h1>
-      <p style="margin:0 0 16px;">You scanned the QR. That means you're part of something that doesn't yet exist for the rest of the world.</p>
+      <p style="margin:0 0 16px;">You're already part of the private beta! That means you're part of something that doesn't yet exist for the rest of the world.</p>
       <p style="margin:0 0 16px;">Shine is a platform where independent musicians sell their music directly to their fans. No middlemen. No algorithms. The money goes straight to the artist. On top of that, they'll be able to receive digital tips in real time — along with other exciting things we have planned throughout the year.</p>
       <p style="margin:0 0 16px;">In September it opens for everyone, but you're already part of it — feel special!</p>
       <p style="margin:0 0 16px;">In the coming weeks we'll keep you posted on how the process is going, what we're building, and when you'll be among the first to step into the exclusive beta.</p>
@@ -113,7 +113,7 @@ shinemusic.app`;
 
     const text = `Hi ${name}, welcome to Shine!
 
-You scanned the QR. That means you're part of something that doesn't yet exist for the rest of the world.
+You're already part of the private beta! That means you're part of something that doesn't yet exist for the rest of the world.
 
 Shine is a platform where independent musicians sell their music directly to their fans. No middlemen. No algorithms. The money goes straight to the artist. On top of that, they'll be able to receive digital tips in real time — along with other exciting things we have planned throughout the year.
 

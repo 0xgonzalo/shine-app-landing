@@ -71,6 +71,15 @@ export const translations = {
         close: "Got it",
       },
     },
+    investors: {
+      eyebrow: "Partners & Investors",
+      heading: "Reshape the music industry with us.",
+      description:
+        "Shine is raising capital and building alliances with people who believe artists deserve the majority — and want to help rebuild how music is valued, sold, and owned.",
+      cta: "Shine Deck",
+      ctaMeta: "PDF · Pitch deck",
+      ctaAria: "Download the Shine pitch deck (PDF)",
+    },
     footer: {
       heading: "Connect with Shine",
       tagline: "Music belongs to those who create it.",
@@ -140,6 +149,15 @@ export const translations = {
           "¡Felicitaciones por suscribirte al Newsletter de Shine! En breve vamos a darte acceso a la beta de la app y esperamos que nos puedas dar tu feedback.",
         close: "Listo",
       },
+    },
+    investors: {
+      eyebrow: "Partners e Inversores",
+      heading: "Reinventá la industria de la música con nosotros.",
+      description:
+        "Shine está levantando capital y sumando alianzas con quienes creen que los artistas merecen la mayor parte — y quieren ayudar a reconstruir cómo se valora, se vende y se posee la música.",
+      cta: "Shine Deck",
+      ctaMeta: "PDF · Pitch deck",
+      ctaAria: "Descargar el pitch deck de Shine (PDF)",
     },
     footer: {
       heading: "Conectá con Shine",

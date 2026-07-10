@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import About from "@/components/About";
 import TheProblem from "@/components/TheProblem";
 import Newsletter from "@/components/Newsletter";
+import Investors from "@/components/Investors";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <About />
         <TheProblem />
         <Newsletter />
+        <Investors />
       </main>
       <Footer />
     </>
